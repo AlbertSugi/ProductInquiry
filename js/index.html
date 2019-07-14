@@ -1,0 +1,19 @@
+<DOCTYPE html>
+	<html>
+	<head>
+		<script src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+	</head>
+	<body ng-app='ProductInventory'>
+		<div ng-controller = "ProductController">
+			<singlelist mylist="products"></singlelist> 
+			<input ng-model="addInventory">
+			<button ng-click ="addItem(products.list,addInventory)">Add Product</button>
+			<singlelist mylist="categories"></singlelist> 
+			<input ng-model="addCategory">
+			<button ng-click ="addItem(categories.list,addCategory)">Add Category</button>
+		</div>
+		<script src = "app.js"></script>
+		<script src = "Controllers/ProductController.js"></script>
+		<script src = "singlelist/singlelist.js"></script>
+	</body>
+	</html>
